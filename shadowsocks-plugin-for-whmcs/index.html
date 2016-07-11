@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Shadowsocks Plugin for WHMCS 魔改版 | Frank Wei的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本插件修改于 小蒋博客
+感谢 小蒋博客 和 古尔数据 的无私贡献!
+我的Shadowsocks插件地址: Github
+为什么要修改
+因为我不喜欢直接显示IP 而显示域名，不显示IP 岂不美哉?
+喜欢折腾
+装逼
+小蒋版本提供的 Shadowsocks Manyuser 并不支持CHACHA20(在已经安装Libsodium的情况下)
+
+所需安装:分四部曲:
+
+架设API(以Nginx为例)
+
+
+建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shadowsocks Plugin for WHMCS 魔改版">
+<meta property="og:url" content="http://frankwei.xyz/shadowsocks-plugin-for-whmcs/index.html">
+<meta property="og:site_name" content="Frank Wei的博客">
+<meta property="og:description" content="本插件修改于 小蒋博客
+感谢 小蒋博客 和 古尔数据 的无私贡献!
+我的Shadowsocks插件地址: Github
+为什么要修改
+因为我不喜欢直接显示IP 而显示域名，不显示IP 岂不美哉?
+喜欢折腾
+装逼
+小蒋版本提供的 Shadowsocks Manyuser 并不支持CHACHA20(在已经安装Libsodium的情况下)
+
+所需安装:分四部曲:
+
+架设API(以Nginx为例)
+
+
+建">
+<meta property="og:updated_time" content="2016-06-15T03:33:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shadowsocks Plugin for WHMCS 魔改版">
+<meta name="twitter:description" content="本插件修改于 小蒋博客
+感谢 小蒋博客 和 古尔数据 的无私贡献!
+我的Shadowsocks插件地址: Github
+为什么要修改
+因为我不喜欢直接显示IP 而显示域名，不显示IP 岂不美哉?
+喜欢折腾
+装逼
+小蒋版本提供的 Shadowsocks Manyuser 并不支持CHACHA20(在已经安装Libsodium的情况下)
+
+所需安装:分四部曲:
+
+架设API(以Nginx为例)
+
+
+建">
+  
+    <link rel="alternative" href="/atom.xml" title="Frank Wei的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://dn-fwei.qbox.me/image/4/a0/b58700be9669a1c3b71c1a4177241.jpg?imageView2/0/w/256/h/256" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Frank Wei</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/friendly-link">友情链接</a></li>
+				        
+							<li><a href="/about">关于Frank</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/frankwei98/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/sp3nc3r/home?wvr=5" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:admin@frankwei.xyz" title="mail">mail</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/iamfrankwei" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tag/ATM/" style="font-size: 10px;">ATM</a> <a href="/tag/ATM取款/" style="font-size: 10px;">ATM取款</a> <a href="/tag/Apple/" style="font-size: 10px;">Apple</a> <a href="/tag/Apple-Pay/" style="font-size: 10px;">Apple Pay</a> <a href="/tag/CCB/" style="font-size: 10px;">CCB</a> <a href="/tag/Conoha/" style="font-size: 10px;">Conoha</a> <a href="/tag/FinalSpeed/" style="font-size: 10px;">FinalSpeed</a> <a href="/tag/Ghost/" style="font-size: 10px;">Ghost</a> <a href="/tag/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tag/Java/" style="font-size: 10px;">Java</a> <a href="/tag/Linode/" style="font-size: 10px;">Linode</a> <a href="/tag/Linux/" style="font-size: 10px;">Linux</a> <a href="/tag/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tag/SSH/" style="font-size: 10px;">SSH</a> <a href="/tag/Shell/" style="font-size: 10px;">Shell</a> <a href="/tag/VPS/" style="font-size: 20px;">VPS</a> <a href="/tag/VestaCP/" style="font-size: 10px;">VestaCP</a> <a href="/tag/Windows/" style="font-size: 10px;">Windows</a> <a href="/tag/android/" style="font-size: 10px;">android</a> <a href="/tag/blog/" style="font-size: 13.33px;">blog</a> <a href="/tag/ghost/" style="font-size: 10px;">ghost</a> <a href="/tag/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tag/oneplus/" style="font-size: 10px;">oneplus</a> <a href="/tag/openshift/" style="font-size: 10px;">openshift</a> <a href="/tag/redhat/" style="font-size: 10px;">redhat</a> <a href="/tag/一加/" style="font-size: 10px;">一加</a> <a href="/tag/友情链接/" style="font-size: 10px;">友情链接</a> <a href="/tag/建设银行/" style="font-size: 10px;">建设银行</a> <a href="/tag/手机/" style="font-size: 10px;">手机</a> <a href="/tag/日常/" style="font-size: 16.67px;">日常</a> <a href="/tag/评测/" style="font-size: 10px;">评测</a> <a href="/tag/银联云闪付/" style="font-size: 10px;">银联云闪付</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://touko.moe/">Hoshino Touko</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://haoduoyu.cc/">_GGG ‘s Blog</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://bismarck.moe/blogrolls/">Kiritoalex</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://logu.co/">LOGCHAN’s BLOG</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zankyo.cc/">青花残念</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Frank Wei</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://dn-fwei.qbox.me/image/4/a0/b58700be9669a1c3b71c1a4177241.jpg?imageView2/0/w/256/h/256" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Frank Wei</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/friendly-link">友情链接</a></li>
+		        
+					<li><a href="/about">关于Frank</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/frankwei98/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/sp3nc3r/home?wvr=5" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:admin@frankwei.xyz" title="mail">mail</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/iamfrankwei" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-shadowsocks-plugin-for-whmcs" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/shadowsocks-plugin-for-whmcs/" class="article-date">
+  	<time datetime="2016-06-15T03:28:34.000Z" itemprop="datePublished">2016-06-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Shadowsocks Plugin for WHMCS 魔改版
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本插件修改于 <a href="https://www.zntec.cn/archives/whmcs-ss-module.html" target="_blank" rel="external">小蒋博客</a></p>
+<p>感谢 <a href="https://www.zntec.cn/archives/whmcs-ss-module.html" target="_blank" rel="external">小蒋博客</a> 和 <a href="https://www.gourdata.com/" target="_blank" rel="external">古尔数据</a> 的无私贡献!</p>
+<p>我的Shadowsocks插件地址: <a href="https://github.com/frankwei98/WHMCS-Shadowsocks" target="_blank" rel="external">Github</a></p>
+<h1 id="为什么要修改"><a href="#为什么要修改" class="headerlink" title="为什么要修改"></a>为什么要修改</h1><ul>
+<li>因为我不喜欢直接显示IP 而显示域名，不显示IP 岂不美哉?</li>
+<li>喜欢折腾</li>
+<li><del>装逼</del></li>
+<li>小蒋版本提供的 Shadowsocks Manyuser 并不支持CHACHA20(在已经安装Libsodium的情况下)</li>
+</ul>
+<h1 id="所需安装"><a href="#所需安装" class="headerlink" title="所需安装:"></a>所需安装:</h1><p>分四部曲:</p>
+<ul>
+<li>架设API(以Nginx为例)</li>
+</ul>
+<ul>
+<li>建设Shadowsocks 后端 (简略带过)</li>
+</ul>
+<ul>
+<li>安装并设置好WHMCS 模块（最重要的一点）</li>
+<li>测试</li>
+</ul>
+<h2 id="在-Nginx-PHP-FPM-服务器上安装API"><a href="#在-Nginx-PHP-FPM-服务器上安装API" class="headerlink" title="在 Nginx+PHP-FPM 服务器上安装API"></a>在 Nginx+PHP-FPM 服务器上安装API</h2><p>本文以<a href="http://lnmp.org" target="_blank" rel="external">军哥的 LNMP 一键包</a> 为例</p>
+<p>这里的 API 要和你准备用来给 Shadowsocks Manyuser 用的数据库是同一个服务器，否则就没意义了。</p>
+<p>条件允许,建议API和WHMCS 装在同一个 VPS最好。</p>
+<p>1、把 API 目录下的 config 目录和 shadowsocksapi.php 放到公共目录，提供公网访问。</p>
+<p>举个例子，如果你正在使用<a href="http://lnmp.org" target="_blank" rel="external">军哥的 LNMP 一键包</a>，那么你默认就把这个API文件放到 <code>/home/wwwroot/default</code></p>
+<p>2、新建一个数据库，并且导入 shadowsocks.sql 到数据库，新建数据库账户时注意设置所有地址访问。</p>
+<p>3、修改 config 目录下的 configuration.php，把刚刚新建的数据库账户密码填进去。</p>
+<p><strong>4、限制 UA 访问，这一步特别重要。</strong></p>
+<p>修改Nginx的站点配置，如果是军哥LNMP包 Nginx的那么配置文件就在 <code>/usr/local/nginx/conf/vhost</code></p>
+<p>在合适的地方加入如下内容（例如 <code>root  /home/wwwroot/default</code> 的下面）：</p>
+<pre><code>root  /home/wwwroot/default;
+
+if ($http_user_agent != &quot;ThisIsUA&quot;){
+        return 444;
+    }
+</code></pre><p>这里把上面的“ThisIsUA”改为一段 HASH，尽可能的长，例如：</p>
+<pre><code>root  /home/wwwroot/default;
+
+if ($http_user_agent != &quot;thM95vqtyvT5d7UCUmDYkHrh&quot;){
+    return 444;
+}
+</code></pre><p><strong>为了安全和便利，建议把API listen 到一个奇葩的端口。</strong><br>如 </p>
+<pre><code>listen 80;
+</code></pre><p>改为</p>
+<pre><code>listen 9527;
+</code></pre><p>然后用<code>crontab -e</code>添加计划任务</p>
+<pre><code>0 0 1 * * php -q /home/wwwroot/default/cron.php
+</code></pre><h2 id="Shadowsocks-服务器端安装"><a href="#Shadowsocks-服务器端安装" class="headerlink" title="Shadowsocks 服务器端安装"></a>Shadowsocks 服务器端安装</h2><p>参考 <a href="https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup(manyuser" target="_blank" rel="external">Breakwa11写的安装ShadowsocksR Manyuser教程</a>)</p>
+<h2 id="WHMCS-模块安装"><a href="#WHMCS-模块安装" class="headerlink" title="WHMCS 模块安装"></a>WHMCS 模块安装</h2><p>关于 WHMCS 就不多介绍了，你连 WHMCS 都不知道，你可以忽略了</p>
+<p>1、把模块按照目录放到 WHMCS，进入后台新建 server，IP 地址填写 API 主机的 IP</p>
+<p>2、Access Hash 填入你刚刚那一段 HASH，账户、密码什么的留空就好了</p>
+<p>3、新建产品，module 界面输入 API 主机的端口，如果你没有修改监听端口就输入 80，如下图</p>
+<p>这里需要注意的就是节点列表最后一个的右边不需要” | “这个符号。</p>
+<p>4、如果想让客户可以定制购买时候的流量，可以新增一个配置选项，名字是<code>traffic|流量套餐</code></p>
+<p>价格自己设置好，如果设置无误的话用户在下单的时候就可以定制流量了，如下：</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>如果你一直到这一步都没出什么错的话，那么就可以自己下单试试可否自动开通啦，如果不行的话就自己检查 API 主机的 IP 对不对、端口对不对、HASH 对不对之类的问题。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/oneplus-3-hands-on/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          一加手机3评测:也就值2499的「旗舰机」
+        
+      </div>
+    </a>
+  
+  
+    <a href="/replace-hardware-to-reborn-the-notebook/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">300元让辣鸡笔记本重换新生(未完待续)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'frankwei'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Frank Wei
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
