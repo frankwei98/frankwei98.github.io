@@ -9,7 +9,7 @@
         <link rel="alternate" type="application/rss+xml" title="Frank Wei" href="/atom.xml">
         <link rel="canonical" href="http://frankwei.xyz/">
 
-        <title>在CentOS 7上安装Docker | Frank Wei的博客</title>
+        <title>Tag: Docker | Frank Wei的博客</title>
         <meta name="description" content="{{meta_description}}">
 
         <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 
     </head>
     
-		<body class="post-template">
+		<body class="home-template">
 	
 
         <header id="header">
@@ -45,10 +45,17 @@
 
         <main id="content">
         
+	<h1 class="post-title">Docker</h1> 
 
-<article class="post">
+
+<section id="{{id}}" class="{{post_class}}">
+  <h3 class="post-title">
+  <a href="/install-docker-on-centos-7/">在CentOS 7上安装Docker</a>
+  
+  <span class="separator"> &middot; </span>
   
   一月 17, 2016
+  
   
     <span class="taglist">  &middot; 
     
@@ -59,68 +66,16 @@
     
       <a href='/tag/Docker/'>Docker</a> 
     
-    </span>
+    </saan>
   
-
-  <h1 class="post-title">在CentOS 7上安装Docker</h1>
-  <section class="post-content article-entry">
-    <h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p>Docker是一个能够把开发应用程序自动部署到容器的开源引擎。它由Docker公司的团队编写，基于Apache 2.0开源协议授权。它提供了一个简单、轻量的建模方式，使开发生命周期更高效快速，鼓励了面向服务的架构设计。</p>
-<h2 id="为什么要使用Docker"><a href="#为什么要使用Docker" class="headerlink" title="为什么要使用Docker"></a>为什么要使用Docker</h2><h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><p>Docker运行对系统内核要求比较高，因此一般建议直接在Ubuntu这样的平台运行。但作为一个容器标准，Docker也是支持其他如CentOS, Mac OS X, Windows等平台。</p>
-<p>目前Docker支持以下版本CentOS:</p>
-<blockquote>
-<p>CentOS 7.x(64位)</p>
-<p>CentOS 6.5(64位)及以后</p>
-</blockquote>
-<p>CentOS6</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>CentOS7 系统 CentOS-Extras 库中已带 Docker，可以直接安装：</p>
-<pre><code>$ sudo yum install docker
-</code></pre><p>安装之后启动 Docker 服务，并让它随系统启动自动加载。</p>
-<pre><code>$ sudo service docker start
-$ sudo chkconfig docker on
-</code></pre><p>挖坑中…</p>
-
-  </section>
-  <footer class="post-footer">
-    <!--
-    <section class="author">
-      <h4>Frank Wei</h4>
-      <p></p>
-    </section>
-    -->
-  </footer>
-</article>
+  </h3>
+</section>
 
 <nav class="pagination" role="pagination">
-    
-    <a class="newer-posts" href="/using-ssh-in-mac/">
-        ← prev <!--从Windows到Mac:熟悉在Mac上使用SSH命令-->
-    </a>
-    
-    <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/about/">
-        <!--About Me--> next →
-    </a>
-    
+  
+  <span class="page-number">Page 1 of 1</span>
+  
 </nav>
-
-<!-- Begin Comments Code -->
-<div id="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'frankwei'; // required: replace example with your shortname
-      var disqus_identifier = '';
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-<!-- End Comments Code -->
-
 
         </main>
         <footer id="footer">
